@@ -1,0 +1,17 @@
+<h2>Weather Search</h2>
+<button (click)="logout()" style="float:right;">Logout</button>
+<input
+  type="text"
+  placeholder="Enter city"
+  [(ngModel)]="city">
+
+<button (click)="searchWeather()">Search</button>
+
+<div *ngIf="weatherData">
+  <p><b>City:</b> {{ weatherData.city }}</p>
+  <p><b>Temperature:</b> {{ weatherData.temperature }}</p>
+  <p><b>Humidity:</b> {{ weatherData.humidity }}</p>
+  <p><b>Description:</b> {{ weatherData.description }}</p>
+</div>
+
+<div id="map" style="height: 400px; margin-top: 20px;"></div>
